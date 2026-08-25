@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://bhanu4812.github.io/Baby-kids-clothing-store/sitemap.xml
