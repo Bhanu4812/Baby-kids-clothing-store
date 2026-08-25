@@ -1,0 +1,40 @@
+html[dir=rtl] .brand-copy,html[dir=rtl] .dropdown-menu,html[dir=rtl] .primary-nav{text-align:start}html[dir=rtl] .mobile-action svg{transform:scaleX(-1)}
+html[dir=rtl] .newsletter-control button svg{transform:scaleX(-1)}
+html[dir=rtl] .footer-column>a:hover{transform:translateX(-3px)}
+html[dir=rtl] .hero-button-primary svg{transform:scaleX(-1)}
+html[dir=rtl] .hero-edition{writing-mode:vertical-lr}
+html[dir=rtl] .age-card:hover .age-cta svg{transform:translateX(-3px) scaleX(-1)}
+html[dir=rtl] .age-cta svg{transform:scaleX(-1)}
+html[dir=rtl] .category-action svg{transform:scaleX(-1)}
+html[dir=rtl] .category-tile:hover .category-action svg{transform:translateX(-3px) scaleX(-1)}
+html[dir=rtl] .seasonal-cta svg{transform:scaleX(-1)}
+html[dir=rtl] .arrivals-head>a svg{transform:scaleX(-1)}
+html[dir=rtl] .arrivals-head>a:hover svg{transform:translateX(-3px) scaleX(-1)}
+html[dir=rtl] .uniform-feature-actions .hero-button-primary svg{transform:scaleX(-1)}
+@media(min-width:640px){html[dir=rtl] .uniform-feature-content{grid-column:2}html[dir=rtl] .uniform-feature-visual{grid-column:1}html[dir=rtl] .uniform-feature-visual::after{background:linear-gradient(270deg,var(--button),transparent 18%)}}
+@media(min-width:640px){html[dir=rtl] .uniform-feature-visual::after{background:linear-gradient(270deg,var(--button),transparent 9%)}}
+@media(min-width:640px) and (max-width:1023px){html[dir=rtl] .uniform-feature-content,html[dir=rtl] .uniform-feature-visual{grid-column:1}}
+html[dir=rtl] .gift-card-copy>a svg{transform:scaleX(-1)}html[dir=rtl] .gift-card:hover .gift-card-copy>a svg{transform:translateX(-4px) scaleX(-1)}
+html[dir=rtl] .gift-card:hover .gift-card-copy>a svg,html[dir=rtl] .gift-card-copy>a:hover svg,html[dir=rtl] .gift-card-copy>a:focus-visible svg{transform:translateX(-3px) scaleX(-1)}
+html[dir=rtl] .sale-campaign-content{margin-inline-start:auto}html[dir=rtl] .sale-campaign-image{transform:scaleX(-1)}html[dir=rtl] .sale-campaign-shell:hover .sale-campaign-image{transform:scaleX(-1) scale(1.018)}html[dir=rtl] .sale-campaign-visual::after{background:linear-gradient(270deg,rgba(247,250,246,.9),rgba(247,250,246,.72) 34%,transparent 62%)}html[data-theme=dark][dir=rtl] .sale-campaign-visual::after{background:linear-gradient(270deg,rgba(21,34,28,.94),rgba(21,34,28,.7) 38%,transparent 68%)}html[dir=rtl] .sale-campaign-cta svg{transform:scaleX(-1)}
+@media(max-width:639px){html[dir=rtl] .sale-campaign-visual::after{display:none}}
+html[dir=rtl] .lookbook-tile>span svg{transform:scaleX(-1)}html[dir=rtl] .lookbook-tile:hover>span svg{transform:translateX(-3px) scaleX(-1)}
+html[dir=rtl] .home2-hero-media img{transform:scaleX(-1)}html[dir=rtl] .home2-hero:hover .home2-hero-media img{transform:scaleX(-1) scale(1.012)}html[dir=rtl] .home2-hero-scrim{background:linear-gradient(270deg,rgba(11,18,14,.76),rgba(11,18,14,.5) 31%,rgba(11,18,14,.08) 61%,rgba(11,18,14,.12))}html[dir=rtl] .home2-hero .hero-button-primary svg,html[dir=rtl] .home2-shop-all svg{transform:scaleX(-1)}html[dir=rtl] .home2-shop-all:hover svg{transform:translateX(-3px) scaleX(-1)}
+@media(max-width:1023px){html[dir=rtl] .home2-hero-scrim{background:linear-gradient(270deg,rgba(11,18,14,.72),rgba(11,18,14,.38) 48%,rgba(11,18,14,.08) 78%)}}@media(max-width:639px){html[dir=rtl] .home2-hero-scrim{background:linear-gradient(180deg,rgba(11,18,14,.08),rgba(11,18,14,.24) 36%,rgba(11,18,14,.86))}}
+html[dir=rtl] .story-copy svg{transform:scaleX(-1)}html[dir=rtl] .story-entry:hover .story-copy svg{transform:translateX(-3px) scaleX(-1)}
+html[dir=rtl] .signature-cta svg,html[dir=rtl] .signature-teaser svg{transform:scaleX(-1)}html[dir=rtl] .signature-cta:hover svg,html[dir=rtl] .signature-teaser a:hover svg{transform:translateX(-3px) scaleX(-1)}
+@media(min-width:1024px){html[dir=rtl] .craft-story-copy{grid-column:3}html[dir=rtl] .craft-life-image{grid-column:1;margin-inline:0 -18px}html[dir=rtl] .craft-story-spine{writing-mode:vertical-lr}}
+html[dir=rtl] .occasion-entry::before{transform:translate(50%,-50%)}html[dir=rtl] .occasion-copy>a svg{transform:scaleX(-1)}html[dir=rtl] .occasion-entry:hover .occasion-copy>a svg,html[dir=rtl] .occasion-copy>a:hover svg{transform:translateX(-3px) scaleX(-1)}
+html[dir=rtl] .occasion-copy>a::after{transform-origin:right center}
+@media(max-width:639px){html[dir=rtl] .occasion-entry::before{transform:translate(50%,0)}html[dir=rtl] .occasion-number{writing-mode:vertical-lr}}
+html[dir=rtl] .pairing-items a svg{transform:scaleX(-1)}html[dir=rtl] .pairing-items a:hover svg{transform:translateX(-3px) scaleX(-1)}
+@media(min-width:1024px){html[dir=rtl] .pairing-items li:nth-child(odd){grid-column:3;justify-self:start}html[dir=rtl] .pairing-items li:nth-child(even){grid-column:1;justify-self:end}html[dir=rtl] .pairing-items li:nth-child(odd)::after{inset-inline-start:auto;inset-inline-end:100%}html[dir=rtl] .pairing-items li:nth-child(even)::after{inset-inline-end:auto;inset-inline-start:100%}}
+html[dir=rtl] .journal-read::after{transform-origin:right center}html[dir=rtl] .journal-read svg{transform:scaleX(-1)}html[dir=rtl] .journal-read:hover svg,html[dir=rtl] .journal-article:hover .journal-read svg{transform:translateX(-3px) scaleX(-1)}
+html[dir=rtl] .little-circle-form .newsletter-control button svg{transform:scaleX(-1)}
+html[dir=rtl] .about-monogram small{writing-mode:vertical-lr}
+@media(max-width:639px){html[dir=rtl] .about-monogram small{writing-mode:horizontal-tb}}
+html[dir=rtl] .about-introduction-bg{transform:scaleX(-1)}html[dir=rtl] .about-introduction::after{background:linear-gradient(270deg,color-mix(in srgb,var(--hero-bg) 96%,transparent),color-mix(in srgb,var(--hero-bg) 90%,transparent) 48%,color-mix(in srgb,var(--hero-bg) 55%,transparent) 76%,color-mix(in srgb,var(--hero-bg) 22%,transparent))}
+html[data-theme=dark][dir=rtl] .about-introduction::after{background:linear-gradient(270deg,rgba(21,34,28,.98),rgba(21,34,28,.9) 58%,rgba(21,34,28,.68))}
+@media(max-width:639px){html[dir=rtl] .about-introduction::after{background:linear-gradient(180deg,color-mix(in srgb,var(--hero-bg) 92%,transparent),color-mix(in srgb,var(--hero-bg) 96%,transparent) 72%,color-mix(in srgb,var(--hero-bg) 90%,transparent))}html[data-theme=dark][dir=rtl] .about-introduction::after{background:linear-gradient(180deg,rgba(21,34,28,.91),rgba(21,34,28,.98) 68%,rgba(21,34,28,.95))}}
+html[dir=rtl] .about-introduction::after{background:linear-gradient(270deg,color-mix(in srgb,var(--hero-bg) 99%,transparent),color-mix(in srgb,var(--hero-bg) 96%,transparent) 55%,color-mix(in srgb,var(--hero-bg) 82%,transparent) 78%,color-mix(in srgb,var(--hero-bg) 42%,transparent))}html[data-theme=dark][dir=rtl] .about-introduction::after{background:linear-gradient(270deg,rgba(21,34,28,.995),rgba(21,34,28,.97) 62%,rgba(21,34,28,.78))}
+@media(max-width:639px){html[dir=rtl] .about-introduction::after{background:linear-gradient(180deg,color-mix(in srgb,var(--hero-bg) 94%,transparent),color-mix(in srgb,var(--hero-bg) 99%,transparent) 76%,color-mix(in srgb,var(--hero-bg) 96%,transparent))}html[data-theme=dark][dir=rtl] .about-introduction::after{background:linear-gradient(180deg,rgba(21,34,28,.96),rgba(21,34,28,.995) 72%,rgba(21,34,28,.98))}}
