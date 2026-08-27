@@ -1,0 +1,25 @@
+# Generated dependencies and build output
+node_modules/
+.next/
+dist/
+build/
+.cache/
+.turbo/
+.vite/
+.parcel-cache/
+coverage/
+
+# Local and generated files
+*.log
+*.map
+.DS_Store
+Thumbs.db
+*.zip
+*.rar
+*.7z
+
+# Environment secrets (keep examples)
+.env
+.env.*
+!.env.example
+
