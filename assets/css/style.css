@@ -1223,6 +1223,237 @@ p{font-size:var(--font-body);line-height:var(--line-body)}
   font-size:15px;
 }
 
+/* Shared typography roles — sourced from Home Page 1. */
+:root{
+  --type-display:var(--font-h1);
+  --type-section-title:var(--font-h2);
+  --type-subsection-title:var(--font-h3);
+  --type-card-title:var(--font-h4);
+  --type-body:var(--font-body);
+  --type-body-small:var(--font-small);
+  --type-label:var(--font-label);
+  --type-cta:var(--font-label);
+}
+
+/* Internal-page heroes use the Home Page 1 display tier. */
+:is(.about-main,.shop-main,.sale-main,.size-guide-main,.contact-main,.gifting-main) h1{
+  font-size:var(--type-display);
+  line-height:1.03;
+  letter-spacing:-.042em;
+}
+
+/* Corresponding section and card roles share one visual hierarchy. */
+:is(.home2-main,.about-main,.shop-main,.sale-main,.size-guide-main,.contact-main,.gifting-main) h2{
+  font-size:var(--type-section-title);
+  line-height:var(--line-heading);
+  letter-spacing:-.025em;
+}
+
+:is(.home2-main,.about-main,.shop-main,.sale-main,.size-guide-main,.contact-main,.gifting-main) h3{
+  font-size:var(--type-card-title);
+  line-height:1.25;
+  letter-spacing:-.015em;
+}
+
+/* Journal imagery may vary in scale, while every article keeps equal text sizing. */
+.style-journal .journal-copy h3{font-size:var(--type-card-title);line-height:1.25}
+.style-journal .journal-copy>p{font-size:var(--type-body);line-height:var(--line-body)}
+
+/* Section introductions and ordinary descriptive copy use the master body tier. */
+:is(
+  .story-rail-head,.style-journal-head,.about-introduction-note,.origin-copy,.manifesto-copy,
+  .mission-copy,.vision-copy,.process-head,.fit-philosophy-head,.team-head,
+  .shop-introduction-copy,.shop-catalogue-head,.shop-assistance-head,.shop-look-sheet-heading,
+  .size-guide-intro-copy,.size-finder-head,.measure-board-head,.size-chart-head,.size-fit-faq-head,
+  .gifting-intro-content,.gift-finder-head,.curated-gift-boxes-head,.gift-occasion-index-head,
+  .build-gift-head,.gift-presentation-head,.sale-last-sizes-header,.sale-uniform-savings-intro,
+  .sale-price-drop-product,.sale-closing-copy,.contact-introduction-copy,.contact-directory-head,
+  .contact-uniform-head,.contact-form-head
+) > p{
+  font-size:var(--type-body);
+  line-height:var(--line-body);
+}
+
+/* Eyebrows, overlines, issue/read metadata and compact annotations. */
+:is(
+  .home2-season,.journal-kicker,.journal-meta,.about-eyebrow,.about-founded,
+  .process-head>span,.fit-philosophy-head>span,.team-head>span,.shop-introduction-eyebrow,
+  .shop-catalogue-head>span,.shop-assistance-head>span,.shop-look-sheet-heading span,
+  .size-guide-intro-eyebrow,.size-finder-head>span,.measure-board-head span,
+  .size-chart-head>span,.size-fit-faq-head>span,.gifting-intro-eyebrow,
+  .gift-finder-head>span,.curated-gift-boxes-head>span,.gift-occasion-index-head>span,
+  .build-gift-head>div>span,.gift-presentation-head>span
+){font-size:var(--type-label)}
+
+/* Shared CTA typography, including text links presented as actions. */
+:is(
+  .journal-read,.story-copy>a,.signature-cta,.about-origin-cta,.fit-philosophy-cta,
+  .shop-introduction-cta,.uniform-insert-action,.look-sheet-action,.shop-assistance-list b,
+  .size-guide-intro-cta,.size-finder-result>a,.size-fit-faq-cta,.gifting-intro-cta,
+  .gift-finder-result>a,.gift-cabinet-entry>div>a,.build-gift-review button,
+  .sale-size-link,.sale-uniform-action,.sale-price-drop-cta,.sale-closing-action
+){font-size:var(--type-cta)}
+
+/* Frequently repeated secondary-page roles called out in the audit. */
+.about-main .design-process h2{font-size:var(--type-section-title);line-height:var(--line-heading);letter-spacing:-.025em}
+
+.process-sequence h3,
+.uniform-insert-copy h3,
+.shop-assistance-list strong,
+.gift-occasion-list h3{font-size:var(--type-card-title);line-height:1.25}
+
+.process-sequence p,
+.uniform-insert-copy p,
+.shop-assistance-list>a>span,
+.gift-occasion-list p,
+.size-fit-answer p{font-size:var(--type-body);line-height:var(--line-body)}
+
+.process-eyebrow,.process-head-note span{font-size:var(--type-label)}
+.process-head-note p{font-size:var(--type-body);line-height:var(--line-body)}
+
+/* Keep anchored About headings clear of the sticky site header. */
+.about-main :is(h1,h2,h3)[id]{scroll-margin-top:112px}
+.about-main .fit-statement h2{font-size:var(--type-section-title);line-height:var(--line-heading);letter-spacing:-.025em}
+.about-main .fit-principle h3{font-size:var(--type-card-title);line-height:1.25}
+.about-main .fit-principle p{font-size:var(--type-body);line-height:var(--line-body)}
+
+.size-fit-accordion h3 button{font-size:var(--font-h5);line-height:1.35;letter-spacing:-.01em}
+
+.measure-board-notes h3{font-size:var(--type-card-title);line-height:1.25}
+.measure-board-notes p{font-size:var(--type-body);line-height:var(--line-body)}
+.measure-board-notes li>span,.measure-board-notes small{font-size:var(--type-label)}
+
+/* School-savings rows use the same product and body tiers as Home Page 1 cards. */
+.sale-uniform-table tbody th>a{font-size:var(--type-card-title);line-height:1.25}
+.sale-uniform-table tbody th>small{font-size:var(--type-body);line-height:var(--line-body)}
+.sale-uniform-table tbody td{font-size:var(--type-body)}
+.sale-uniform-table td>strong{font-size:var(--type-card-title);line-height:1.25}
+
+/* Contact service register follows the shared card/body hierarchy. */
+.contact-main :is(h1,h2,h3)[id]{scroll-margin-top:112px}
+.contact-service-register strong{font-size:var(--font-h5);line-height:1.3}
+.contact-service-register small{font-size:var(--type-body);line-height:var(--line-body)}
+.contact-service-register li>span,.contact-register-title{font-size:var(--type-label)}
+
+.contact-methods-header h2{font-size:var(--type-section-title);line-height:var(--line-heading);letter-spacing:-.025em}
+.contact-method a,.contact-method strong{font-size:var(--font-h5);line-height:1.3}
+.contact-method p{font-size:var(--type-body);line-height:var(--line-body)}
+.contact-method span{font-size:var(--type-label)}
+
+.contact-routing-header h2{font-size:var(--type-section-title);line-height:var(--line-heading);letter-spacing:-.025em}
+.contact-routing-header p{font-size:var(--type-body);line-height:var(--line-body)}
+.contact-routing-board strong{font-size:var(--type-card-title);line-height:1.25}
+.contact-routing-board p{font-size:var(--type-body);line-height:var(--line-body)}
+.contact-routing-header>span,.contact-route-code{font-size:var(--type-label)}
+
+.school-brief-group>legend small,
+.school-form-hint,
+.school-choice-group>p,
+.school-form-footer>div p,
+.school-form-success p{font-size:var(--type-body);line-height:var(--line-body)}
+.school-form-field label,.school-choice-group>legend,.school-form-footer>div span{font-size:var(--type-label)}
+
+.auth-page .login-benefit-row dt{font-size:var(--font-h5);line-height:1.3}
+.auth-page .login-benefit-row dd{font-size:var(--type-body);line-height:var(--line-body)}
+.auth-page .register-welcome-copy>p{font-size:var(--type-body);line-height:var(--line-body)}
+.auth-page .register-membership-notes strong{font-size:var(--font-h5);line-height:1.3}
+.auth-page .register-membership-notes p{font-size:var(--type-body);line-height:var(--line-body)}
+.auth-page .register-membership-notes li>span{font-size:var(--type-label)}
+
+.about-main .studio-team h2{font-size:var(--type-section-title);line-height:var(--line-heading);letter-spacing:-.025em}
+.about-main .team-credit h3{font-size:var(--type-card-title);line-height:1.25}
+.about-main .team-role,.about-main .team-member figcaption{font-size:var(--type-label)}
+.about-main .team-belief{font-size:var(--type-body);line-height:var(--line-body)}
+
+/* Keep the drafting line behind the size-guide CTA, including its hover state. */
+.fit-guide-link{z-index:2;isolation:isolate;box-shadow:0 0 0 18px var(--hero-bg),0 8px 22px color-mix(in srgb,var(--button) 18%,transparent)}
+.fit-guide-link:hover{background:var(--hero-bg);box-shadow:0 0 0 18px var(--hero-bg)}
+
+/* Keep the 404 display fully visible on shorter desktop and laptop screens. */
+.error-page-number{display:block;font-size:clamp(7rem,11vw,10.5rem);line-height:.82}
+.error-page-copy h1{font-size:clamp(3rem,4vw,4.6rem);line-height:1}
+.error-page-description,.error-page-note,.error-page-visual figcaption{font-size:var(--type-body);line-height:var(--line-body)}
+@media(min-width:768px) and (max-height:820px){
+  .error-page-shell{align-items:center;padding-block:96px 34px}
+  .error-page-number{margin-block-start:18px;font-size:clamp(6.5rem,9vw,8.5rem)}
+  .error-page-copy h1{margin-block-start:28px;font-size:clamp(2.8rem,3.7vw,4rem)}
+  .error-page-description{margin-block-start:18px}
+  .error-page-actions{margin-block-start:24px}
+  .error-page-note{margin-block-start:22px}
+  .error-page-image-frame{min-height:500px}
+  .error-page-image-frame img{height:440px}
+}
+@media(max-width:767px){
+  .error-page-number{font-size:clamp(7rem,28vw,10rem)}
+  .error-page-copy h1{font-size:clamp(2.65rem,12vw,3.7rem)}
+}
+
+/* Coming-soon content uses the shared hierarchy around its intentional countdown display. */
+.coming-page-intro,
+.coming-countdown-state,
+.coming-privacy,
+.coming-form-status,
+.coming-preview p,
+.coming-preview ul{font-size:var(--type-body);line-height:var(--line-body)}
+.coming-preview h2{font-size:var(--type-subsection-title);line-height:var(--line-heading);letter-spacing:-.025em}
+.coming-page-badge,
+.coming-countdown span,
+.coming-notify-form>label,
+.coming-notify-form button,
+.coming-preview>span,
+.coming-progress,
+.coming-visual-code{font-size:var(--type-label)}
+@media(min-width:901px) and (max-height:820px){
+  .coming-page-shell{padding-block:94px 34px}
+  .coming-page-copy h1{font-size:clamp(3.3rem,4.5vw,4.6rem)}
+  .coming-page-intro{margin-block-start:18px}
+  .coming-countdown{margin-block-start:24px}
+  .coming-countdown>div{min-height:88px;padding:13px}
+  .coming-notify-form{margin-block-start:20px}
+  .coming-page-visual>figure{height:620px}
+}
+@media(min-width:901px) and (max-width:1100px){
+  .coming-preview{
+    inset-inline-start:20px;
+    inset-block-end:20px;
+    width:min(440px,58%);
+    padding:30px;
+  }
+  .coming-preview h2{margin-block-start:10px}
+  .coming-preview p{margin-block-start:13px}
+  .coming-preview ul{margin-block-start:16px;padding-block-start:14px}
+}
+@media(min-width:640px) and (max-width:900px){
+  .coming-preview{position:relative;inset:auto;width:100%;margin-block-start:14px}
+}
+
+/* Keep the complete campaign portrait visible; the copy card follows the image. */
+.coming-preview{
+  position:relative;
+  inset:auto;
+  width:100%;
+  margin-block-start:14px;
+}
+
+@media(max-width:639px){
+  :is(.about-main,.shop-main,.sale-main,.size-guide-main,.contact-main,.gifting-main) h1{
+    font-size:var(--type-display);
+  }
+
+  :is(.home2-main,.about-main,.shop-main,.sale-main,.size-guide-main,.contact-main,.gifting-main) h2{
+    font-size:var(--type-section-title);
+  }
+
+  .about-main .design-process h2{font-size:var(--type-section-title)}
+  .about-main :is(h1,h2,h3)[id]{scroll-margin-top:88px}
+  .contact-main :is(h1,h2,h3)[id]{scroll-margin-top:88px}
+
+  :is(.home2-main,.about-main,.shop-main,.sale-main,.size-guide-main,.contact-main,.gifting-main) h3,
+  .style-journal .journal-copy h3{
+    font-size:var(--type-card-title);
+  }
+}
+
 @media(max-width:639px){
   :root{
     --content-section-space:56px;
