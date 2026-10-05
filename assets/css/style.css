@@ -1482,3 +1482,112 @@ p{font-size:var(--font-body);line-height:var(--line-body)}
 [dir=rtl] .gifting-introduction{background-image:linear-gradient(270deg,color-mix(in srgb,var(--panel) 97%,transparent) 0%,color-mix(in srgb,var(--panel) 91%,transparent) 38%,color-mix(in srgb,var(--panel) 38%,transparent) 62%,color-mix(in srgb,var(--panel) 8%,transparent) 100%),url('../images/optimized/gifting-atelier-hero-v2-1536.webp')}
 @media(max-width:1023px){.size-guide-introduction::before{background-image:url('../images/optimized/size-guide-measurement-desk-bg-960.webp')}.shop-introduction::before{background-image:url('../images/optimized/shop-boutique-collection-bg-960.webp')}.about-introduction-bg{background-image:url('../images/optimized/about-introduction-atelier-bg-960.webp')}.gifting-introduction{background-image:linear-gradient(90deg,color-mix(in srgb,var(--panel) 96%,transparent) 0%,color-mix(in srgb,var(--panel) 88%,transparent) 48%,color-mix(in srgb,var(--panel) 18%,transparent) 100%),url('../images/optimized/gifting-atelier-hero-v2-960.webp')}[dir=rtl] .gifting-introduction{background-image:linear-gradient(270deg,color-mix(in srgb,var(--panel) 96%,transparent) 0%,color-mix(in srgb,var(--panel) 88%,transparent) 48%,color-mix(in srgb,var(--panel) 18%,transparent) 100%),url('../images/optimized/gifting-atelier-hero-v2-960.webp')}}
 @media(max-width:639px){.size-guide-introduction::before{background-image:url('../images/optimized/size-guide-measurement-desk-bg-480.webp')}.shop-introduction::before{background-image:url('../images/optimized/shop-boutique-collection-bg-480.webp')}.about-introduction-bg{background-image:url('../images/optimized/about-introduction-atelier-bg-480.webp')}.gifting-introduction,[dir=rtl] .gifting-introduction{background-image:linear-gradient(180deg,color-mix(in srgb,var(--panel) 4%,transparent) 0%,color-mix(in srgb,var(--panel) 10%,transparent) 38%,color-mix(in srgb,var(--panel) 92%,transparent) 65%,var(--panel) 100%),url('../images/optimized/gifting-atelier-hero-v2-960.webp')}}
+
+/* One responsive content edge across navigation, pages, and footer. */
+:root{--page-gutter:clamp(20px,4vw,64px);--content-width:1400px;--page-inset:max(var(--page-gutter),calc((100% - var(--content-width))/2))}
+.header-shell,.footer-bottom-inner{width:calc(100% - 2 * var(--page-gutter));max-width:var(--content-width);margin-inline:auto}
+main:not(.login-main):not(.error-page-main):not(.coming-page-main)>section,
+.footer-newsletter-wrap,.footer-main{padding-inline:var(--page-inset)}
+main>section>[class$="-shell"]{width:100%;max-width:none}
+.error-page-shell,.coming-page-shell{width:calc(100% - 2 * var(--page-gutter));max-width:var(--content-width)}
+.error-page-topbar,.coming-page-topbar{inset-inline:var(--page-inset)}
+.header-cta{display:inline-flex;min-height:42px;align-items:center;justify-content:center;margin-inline-start:5px;padding-inline:18px;border:1px solid var(--button);border-radius:8px;background:var(--button);color:var(--on-button);font-size:12px;font-weight:600;white-space:nowrap;transition:background var(--ease),color var(--ease)}
+.header-cta:hover{background:transparent;color:var(--button)}
+.brand-mark{width:44px;height:44px;filter:none;flex:0 0 44px}
+.brand-mark svg.miette-logo{width:44px;height:44px;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.miette-logo .miette-frame{fill:var(--panel);stroke:var(--accent);stroke-width:1.2}
+.miette-logo .miette-monogram{stroke:var(--button);stroke-width:2.1}
+.miette-logo .miette-thread{stroke:var(--warm-accent);stroke-width:1.5}
+.brand-name{font-size:20px;letter-spacing:-.025em}
+.brand-tagline{font-size:10px;letter-spacing:.1em;line-height:1.4}
+@media(max-width:1180px) and (min-width:1024px){.header-shell{gap:12px}.nav-inner{gap:12px}.nav-link{font-size:12px}.header-cta{padding-inline:12px}}
+@media(max-width:1023px){.header-cta.desktop-action{display:none}.mobile-cta{grid-column:1/-1;margin:2px 0 0}.primary-nav{padding-inline:var(--page-gutter)}.error-page-topbar,.coming-page-topbar{inset-inline:auto;padding-inline:var(--page-inset)}}
+@media(max-width:639px){.brand-mark,.brand-mark svg.miette-logo{width:38px;height:38px}.brand-mark{flex-basis:38px}.brand-name{font-size:18px}.footer-logo .brand-name{font-size:20px}}
+/* Maison Miette atelier seal: fine gold engraving and a serif monogram. */
+.brand-mark svg.miette-logo{width:44px;height:44px}
+.miette-logo .miette-frame{fill:var(--panel);stroke:var(--warm-accent);stroke-width:1}
+.miette-logo .miette-monogram{stroke:var(--heading);stroke-width:1.55;stroke-linecap:butt;stroke-linejoin:miter}
+.miette-logo .miette-thread{stroke:var(--warm-accent);stroke-width:.65}
+.brand-name{font-weight:600;letter-spacing:-.015em}
+.brand-tagline{color:var(--muted);font-size:10px;letter-spacing:.13em}
+/* Explicit stroke styling keeps the seasonal arrow visible at every size. */
+.seasonal-cta svg{display:block;width:20px;height:20px;flex:0 0 20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+/* A fixed forest campaign panel maintains contrast in both themes. */
+.uniform-feature-shell{background:#243f32}
+.uniform-feature-content{color:#fffaf0}
+.uniform-feature-content h2,.uniform-feature-content .section-eyebrow,
+.uniform-feature-content>p:not(.uniform-feature-callout),
+.uniform-feature-content .uniform-feature-callout{color:#fffaf0}
+.uniform-benefits li{background:#304f3e;border-color:#708a78}
+.uniform-benefits li:last-child{border-block-end-color:#708a78}
+.uniform-benefits strong{color:#fffaf0}
+.uniform-benefits li>span{background:#fffaf0;color:#243f32;border-color:#fffaf0}
+.uniform-benefits li>span svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.uniform-feature-actions .hero-button-primary{background:#fffaf0;border-color:#fffaf0;color:#243f32}
+.uniform-feature-actions .hero-button-primary:hover{background:#243f32;color:#fffaf0}
+.uniform-feature-actions .hero-button-secondary{color:#fffaf0;border-color:#c5d2c8}
+.uniform-feature-actions .hero-button-secondary:hover{color:#fffaf0;border-color:#fffaf0}
+.uniform-feature-visual::after{background:linear-gradient(90deg,#243f32,transparent 9%)}
+html[dir=rtl] .uniform-feature-visual::after{background:linear-gradient(270deg,#243f32,transparent 9%)}
+@media(max-width:1023px){.uniform-feature-visual::after,html[dir=rtl] .uniform-feature-visual::after{display:none}}
+@media(max-width:639px){.brand-mark svg.miette-logo{width:38px;height:38px}}
+/* Align section titles with their introductions beneath a shared eyebrow row. */
+.values-head,.occasion-edit-head,.mission-vision-head,.main-catalogue-head{align-items:center;text-align:start;column-gap:clamp(32px,5vw,80px);row-gap:18px}
+.values-head>div,.main-catalogue-head>div{display:contents}
+.values-head .section-eyebrow,.main-catalogue-head>div>span{grid-column:1/-1;margin:0}
+.values-head h2,.main-catalogue-head h2{margin:0}
+.values-head>p,.occasion-edit-head>p,.mission-vision-head>p,.main-catalogue-head>p{align-self:center;margin:0}
+/* Equal inset and vertical rhythm throughout the boutique assistance cards. */
+.shop-assistance-list{align-items:stretch}
+.shop-assistance-list>a{padding:clamp(24px,2.5vw,36px);gap:0}
+.shop-assistance-list strong{min-height:2.32em;margin-block-start:16px}
+.shop-assistance-list>a>span{flex:1;margin-block-start:16px;padding-block-end:24px}
+.shop-assistance-list b{width:100%;min-width:0;min-height:48px;margin-block-start:0;padding:12px 16px;line-height:1.4}
+.shop-assistance-list b svg{width:20px;height:20px;flex:0 0 20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform var(--ease)}
+.shop-assistance-list>a:hover b svg{transform:translateX(3px)}
+html[dir=rtl] .shop-assistance-list b svg{transform:scaleX(-1)}
+html[dir=rtl] .shop-assistance-list>a:hover b svg{transform:scaleX(-1) translateX(3px)}
+@media(max-width:1023px){.values-head,.occasion-edit-head,.mission-vision-head,.main-catalogue-head{grid-template-columns:minmax(0,1fr);row-gap:16px}.values-head>p,.occasion-edit-head>p,.mission-vision-head>p,.main-catalogue-head>p{max-width:650px}}
+@media(max-width:639px){.shop-assistance-list>a{padding:28px 20px}.shop-assistance-list strong{min-height:0}.shop-assistance-list>a>span{min-height:0;padding-block-end:22px}}
+/* Keep currency glyphs legible beside the gift cabinet's display numerals. */
+.gift-cabinet-entry>div strong{display:inline-flex;align-items:baseline;gap:3px;color:var(--heading);white-space:nowrap;line-height:1.25}
+.gift-cabinet-entry .gift-currency{color:inherit;font-family:var(--body);font-size:.85em;font-weight:600;line-height:1}
+/* Compact sale values preserve the original-to-current price hierarchy. */
+.sale-price-before del{font-size:clamp(1.75rem,2.5vw,2.75rem);line-height:1.15}
+.sale-price-after strong{font-size:clamp(2.5rem,4vw,4rem);line-height:1.1;letter-spacing:-.035em}
+/* Reception content shares the breadcrumb and photograph's outer edges. */
+.contact-introduction .contact-breadcrumb{width:100%;margin-inline:0}
+.contact-introduction .contact-breadcrumb ol{padding-inline-start:0}
+.contact-introduction .contact-reception-image{width:100%;margin-inline:0}
+.contact-introduction .contact-reception-heading{width:100%;margin:0;padding:clamp(28px,3vw,44px);box-shadow:none;align-items:center}
+.contact-introduction .contact-service-register{width:100%;margin-inline:0}
+.contact-form-field input::placeholder,.contact-form-field textarea::placeholder{color:var(--muted);opacity:1}
+@media(max-width:1023px){.contact-introduction .contact-reception-heading{grid-template-columns:minmax(100px,.3fr) minmax(0,1fr);align-items:start}}
+@media(max-width:639px){.contact-introduction .contact-reception-heading{padding:28px 0}.sale-price-before del{font-size:1.85rem}.sale-price-after strong{font-size:2.75rem}}
+/* Compact editorial product card; details flow together beside the photograph. */
+.sale-price-drop-stage{grid-template-columns:minmax(240px,.75fr) minmax(0,1.25fr);grid-template-areas:none;align-items:stretch;gap:clamp(24px,3vw,40px);padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--panel);overflow:hidden}
+.sale-price-drop-stage::before,.sale-price-drop-reference{display:none}
+.sale-price-drop-image{grid-area:auto;position:relative;align-self:stretch;min-height:0;width:100%;max-width:none;margin:0;overflow:hidden;border-radius:10px}
+.sale-price-drop-image img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;border-radius:10px;object-fit:cover;object-position:center}
+.sale-price-drop-details{display:flex;min-width:0;flex-direction:column;justify-content:space-between;gap:18px}
+.sale-price-drop-product{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:0;border:0}
+.sale-price-drop-product h3{font-size:clamp(28px,3vw,42px);line-height:1.12}
+.sale-price-drop-product p{max-width:540px;font-size:16px;line-height:1.65}
+.sale-price-transition{grid-area:auto;grid-template-columns:auto minmax(40px,1fr) auto;gap:20px;padding:24px 0;border-block:1px solid var(--line)}
+.sale-price-drop-footer{grid-area:auto;grid-template-columns:1fr 1fr;align-items:start;gap:20px;padding:0;border:0}
+.sale-price-drop-cta{grid-column:1/-1;justify-self:stretch;justify-content:space-between;border-radius:6px}
+.sale-price-drop-heading{margin-block-end:32px;align-items:center}
+@media(max-width:1023px){.sale-price-drop-stage{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px}.sale-price-transition{gap:12px}.sale-price-after strong{font-size:2.75rem}}
+@media(max-width:639px){.sale-price-drop-stage{display:flex;padding:20px;gap:24px}.sale-price-drop-image{margin:0;max-width:none}.sale-price-drop-image img{position:static;height:300px;aspect-ratio:auto}.sale-price-drop-details{width:100%;gap:20px}.sale-price-drop-product{display:flex;padding:0}.sale-price-drop-product h3{margin:0;font-size:30px}.sale-price-transition{grid-template-columns:auto minmax(24px,1fr) auto;gap:10px;padding:20px 0}.sale-price-before del{font-size:1.6rem}.sale-price-after strong{font-size:2.3rem}.sale-price-drop-footer{grid-template-columns:1fr 1fr;gap:18px}}
+/* Image height follows the details, with no intrinsic photo height inflating the row. */
+.sale-price-drop-image figcaption{position:absolute;inset-inline:12px;inset-block-end:12px;padding:8px 10px;border-radius:4px;background:var(--panel);font-size:10px;line-height:1.4}
+.sale-price-drop-details .sale-price-transition{padding-block:16px}
+.sale-price-drop-details .sale-price-drop-product{gap:10px}
+.sale-price-drop-details .sale-price-drop-footer{gap:16px}
+.sale-price-drop-details .sale-price-drop-product h3{font-size:clamp(28px,2.5vw,36px)}
+@media(max-width:639px){.sale-price-drop-stage{gap:20px}.sale-price-drop-image{flex:none;min-height:300px}.sale-price-drop-details .sale-price-drop-product h3{font-size:28px}}
+/* Restrained price scale in the final sale spotlight. */
+.sale-price-drop .sale-price-before del{font-size:clamp(20px,1.8vw,26px);line-height:1.2;letter-spacing:-.02em;text-decoration-thickness:1px}
+.sale-price-drop .sale-price-after strong{font-size:clamp(28px,2.5vw,36px);line-height:1.15;letter-spacing:-.025em}
+.sale-price-drop .sale-price-saved strong{font-size:22px;line-height:1.2}
+@media(max-width:639px){.sale-price-drop .sale-price-before del{font-size:20px}.sale-price-drop .sale-price-after strong{font-size:28px}}
