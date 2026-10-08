@@ -870,6 +870,14 @@ p{font-size:var(--font-body);line-height:var(--line-body)}
 .contact-method a:hover{color:var(--accent)}
 .contact-method p{margin:12px 0 0;color:var(--muted);font-size:0.75rem;line-height:1.6}
 .contact-method a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+/* Share text rows across each group of cards when contact details wrap. */
+@media(min-width:640px){
+  .contact-method{grid-row:span 3;grid-template-rows:subgrid;column-gap:16px;row-gap:0}
+  .contact-method>svg{grid-column:1;grid-row:1;height:20px}
+  .contact-method>div{display:grid;grid-column:2;grid-row:1 / -1;grid-template-rows:subgrid;row-gap:0}
+  .contact-method a,.contact-method strong{align-self:start}
+  .contact-method p{align-self:start}
+}
 @media(max-width:1023px){.contact-methods-header{grid-template-columns:1fr auto}.contact-methods-header>span{grid-column:1/-1}.contact-methods-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-method:nth-child(odd){border-inline-start:0}.contact-method:nth-child(n+3){border-block-start:1px solid var(--line)}}
 @media(max-width:639px){.contact-methods{padding-block:58px}.contact-methods-header{grid-template-columns:1fr;gap:12px}.contact-methods-header small{margin-block-start:5px}.contact-methods-strip{display:block}.contact-method{padding:24px 0}.contact-method+.contact-method,.contact-method:nth-child(n+3){border-inline-start:0;border-block-start:1px solid var(--line)}.contact-method a,.contact-method strong{font-size:1.25rem}}
 
@@ -1202,18 +1210,16 @@ p{font-size:var(--font-body);line-height:var(--line-body)}
 /* Site-wide content-section rhythm and responsive gutters. */
 :root{
   --content-section-space:96px;
-  --content-section-gutter:50px;
 }
 
 :is(.home-main,.home2-main,.about-main,.shop-main,.sale-main,.size-guide-main,.contact-main,.gifting-main) > section:not(.collection-navigation):not(.catalogue-toolbar){
   padding-block:var(--content-section-space)!important;
-  padding-inline:var(--content-section-gutter)!important;
+  padding-inline:var(--page-inset)!important;
 }
 
 @media(max-width:1023px){
   :root{
     --content-section-space:72px;
-    --content-section-gutter:30px;
   }
 }
 
@@ -1457,19 +1463,18 @@ p{font-size:var(--font-body);line-height:var(--line-body)}
 @media(max-width:639px){
   :root{
     --content-section-space:56px;
-    --content-section-gutter:10px;
   }
 
   .gifting-main .gifting-introduction-shell,
   .gifting-main .gifting-stationery{
-    width:calc(100vw - 20px);
-    max-width:calc(100vw - 20px);
+    width:100%;
+    max-width:100%;
   }
 
   .gifting-main .gifting-intro-content{
-    flex-basis:calc(100vw - 20px);
-    width:calc(100vw - 20px)!important;
-    max-width:calc(100vw - 20px)!important;
+    flex-basis:100%;
+    width:100%!important;
+    max-width:100%!important;
   }
 }
 /* Responsive image derivatives: keep full-resolution PNG masters out of the render path. */
